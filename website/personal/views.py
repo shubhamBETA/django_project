@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+def index(request):
+    return render(request, 'personal/home.html') # render will look in the templates directory
+
+def contact(request):
+    return render(request, 'personal/basic.html',{'content':['Bohemian rhapsody']})
